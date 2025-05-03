@@ -15,7 +15,7 @@ const Header = () => {
           {/* Logo */}
           <Navbar.Brand as={Link} href=".." className="me-3">
             <Image
-              src="/assets/image.png"
+              src="/assets/image/"
               alt="Logo"
               width={105}
               height={105}
@@ -28,7 +28,9 @@ const Header = () => {
             <Nav.Link href="./Vitamin-Boosters">Vitamin Booster</Nav.Link>
             <Nav.Link href="./Beauty-Boosters">Beauty Booster</Nav.Link>
             <Nav.Link href="./Perawat-Medis">Perawat Medis</Nav.Link>
-            <Nav.Link href="./corporate-Health-Solution">Corporate Health Solution</Nav.Link>
+            <Nav.Link href="./corporate-Health-Solution">
+              Corporate Health Solution
+            </Nav.Link>
             <Nav.Link href="#promo">Promo</Nav.Link>
             <Nav.Link href="#blog">Blog</Nav.Link>
           </Nav>
