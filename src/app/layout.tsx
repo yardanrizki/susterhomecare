@@ -5,10 +5,10 @@ import Header from "./component/navbar";
 import Footer from "./component/footer";
 
 export const metadata = {
-  title: "Nama Website Kamu",
+  title: "SusterHomecare",
   description: "Deskripsi Website",
   icons: {
-    icon: "/assets/image/logo.png",
+    icon: "/public/logo.png",
   },
 };
 export default function RootLayout({
