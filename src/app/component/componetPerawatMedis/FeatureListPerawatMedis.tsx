@@ -42,7 +42,7 @@ const FeatureListPerawtMedis = () => {
       <Row>
         {featureListPerawatMedis.map((item, idx) => (
           <Col md={3} className="mb-4 text-center" key={idx}>
-            <img
+            <image
               src={item.img}
               width={150}
               height={150}

@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Card, Collapse } from "react-bootstrap";
 import { FaChevronDown } from "react-icons/fa";
 import "./accordion-custom.css"; // Import CSS kita di sini
-import { title } from "process";
+import { Collapse } from "react-bootstrap/lib/Navbar";
 
 const accordionItems = [
   {

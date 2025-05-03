@@ -53,13 +53,13 @@ const VitaminCardSection: React.FC<{
 
         {/* Gambar + Badge */}
         <div className="col-md-3 position-relative d-flex justify-content-center align-items-center">
-          <img
+          <image
             src={data.image}
             alt={data.title}
             className="img-fluid image position-relative z-1"
           />
           {data.bestSeller && (
-            <img
+            <image
               src="https://perawathomecare.id/wp-content/uploads/2024/08/Group-920-1.webp"
               className="img-fluid position-absolute z-2"
               style={{
