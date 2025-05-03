@@ -1,0 +1,89 @@
+.accordion-body {
+  background-color: #F5F5F5;
+  margin-bottom: 2%;
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.custom-accordion-btn {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  padding-left: 0;
+  font-weight: bold;
+  color: #212529;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+
+.accordion-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.icon-arrow {
+  font-size: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #212529;
+}
+
+.accordion-button:not(.collapsed) .accordion-title {
+  color: #b30000;
+}
+
+.accordion-button:not(.collapsed) .icon-arrow {
+  transform: rotate(180deg);
+  color: #b30000;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  color: #b30000;
+}
+
+.custom-accordion-btn:hover .accordion-title {
+  text-decoration: none;
+}
+
+/* Custom Bullet List Styling */
+.custom-bullet-list {
+  list-style-type: circle; /* Bullet icon yang digunakan */
+  padding-left: 30px; /* Jarak antara bullet dan teks */
+  margin-bottom: 1em; /* Spasi di bawah list */
+  color: black;
+
+}
+.custom-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem; /* setara dengan Bootstrap mb-1 */
+}
+
+
+.custom-bullet-list li {
+  font-size: 1rem;
+  margin-bottom: 0.5em; /* Menambah jarak antar item di list */
+}
+
+/* Custom Numbered List Styling */
+.numbered-list {
+  list-style-type: decimal; /* Menggunakan angka sebagai list */
+  padding-left: 30px;
+  margin-bottom: 1em;
+}
+
+.numbered-list li {
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+
+/* Menambahkan gaya untuk judul sebelum list */
+.accordion-body h5 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2%; /* Jarak antara judul dan list */
+}
