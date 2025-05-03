@@ -2,7 +2,6 @@
 
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/image";
-import { FaWhatsapp } from "react-icons/fa";
 
 function ServiceHighlightSection() {
   return (

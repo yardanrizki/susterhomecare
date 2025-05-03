@@ -1,7 +1,6 @@
 // src/app/page.tsx atau src/app/home/page.tsx
 
 import CustomAccordion from "../component/accordion";
-import MultiAccordion from "../component/accordion";
 import CallToActionSection from "../component/CallToActionSection";
 import ContactSection from "../component/ContactSection";
 import FeatureCardSection from "../component/componentHome/FeatureCardSection";

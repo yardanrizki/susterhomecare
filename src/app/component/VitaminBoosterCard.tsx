@@ -1,5 +1,5 @@
 import React from "react";
-import { Card} from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 interface VitaminBoosterCardProps {
   data: {
@@ -11,11 +11,10 @@ interface VitaminBoosterCardProps {
     newPrice: string;
     checklistColor: string;
   };
-  index: number;
 }
 
-const VitaminBoosterCard: React.FC<VitaminBoosterCardProps> = ({ data, index }) => {
-  if (!data) return null; // Mencegah error jika data undefined
+const VitaminBoosterCard: React.FC<VitaminBoosterCardProps> = ({ data }) => {
+  if (!data) return null;
 
   const { title, subtitle, image, benefits, oldPrice, newPrice, checklistColor } = data;
   const isBestSeller = title === "Super Move Booster";
@@ -58,6 +57,5 @@ const VitaminBoosterCard: React.FC<VitaminBoosterCardProps> = ({ data, index }) 
     </Card>
   );
 };
-
 
 export default VitaminBoosterCard;

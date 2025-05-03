@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import "./navbar.css"; // jika class `btn-animated` kamu simpan di file ini
 import WhatsAppButton from "./buttonwhatsaap";
 

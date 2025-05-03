@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface VitaminItem {
@@ -53,14 +54,19 @@ const VitaminCardSection: React.FC<{
 
         {/* Gambar + Badge */}
         <div className="col-md-3 position-relative d-flex justify-content-center align-items-center">
-          <image
+          <Image
             src={data.image}
             alt={data.title}
+            width={250}
+            height={250}
             className="img-fluid image position-relative z-1"
           />
           {data.bestSeller && (
-            <image
+            <Image
               src="https://perawathomecare.id/wp-content/uploads/2024/08/Group-920-1.webp"
+              alt="Best Seller"
+              width={150}
+              height={150}
               className="img-fluid position-absolute z-2"
               style={{
                 ...(badgePosition === "left"
@@ -75,8 +81,7 @@ const VitaminCardSection: React.FC<{
                       transform: "translateY(-50%)",
                     }),
                 width: "150px",
-              }}
-              alt="Best Seller"
+              }}              
             />
           )}
         </div>

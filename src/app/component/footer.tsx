@@ -7,7 +7,7 @@ const Footer = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const res = await fetch("/api/newsletter", {
@@ -137,6 +137,7 @@ const Footer = () => {
                 </a>
               </div>
             </Col>
+
             <Col lg={3} md={4}>
               <h5 className="mb-3">IKUTI KAMI</h5>
               <div className="d-flex flex-wrap gap-3">
@@ -170,6 +171,7 @@ const Footer = () => {
                 </a>
               </div>
             </Col>
+
             <Col lg={3} md={12}>
               <h5>BULETIN MINGGUAN</h5>
               <p>

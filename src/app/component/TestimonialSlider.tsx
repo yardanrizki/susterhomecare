@@ -6,6 +6,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Image from "next/image";
 
 const testimonialImages = [
   "https://perawathomecare.id/wp-content/uploads/2024/12/Gambar-testimoni-JKT48-Feni-1.webp",
@@ -39,7 +40,6 @@ const TestimonialSlider = () => {
       <Swiper
         modules={[Pagination]}
         loop={true}
-        loopFillGroupWithBlank={true}
         spaceBetween={20}
         grabCursor={true}
         pagination={{ clickable: true }}
@@ -63,10 +63,11 @@ const TestimonialSlider = () => {
             key={index}
             className="d-flex justify-content-center text-center"
           >
-            <img
+            <Image
               src={src}
               className="img-fluid rounded-4"
-              style={{ width: "308px", height: "auto" }}
+              width = {308} 
+              height = {203}             
               alt={`Testimoni ${index + 1}`}
             />
           </SwiperSlide>

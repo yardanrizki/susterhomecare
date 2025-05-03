@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import "./accordion-custom.css"; // Import CSS kita di sini
-import { Collapse } from "react-bootstrap/lib/Navbar";
+import { Collapse } from "react-bootstrap";
 
 const accordionItems = [
   {

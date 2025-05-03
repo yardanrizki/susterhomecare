@@ -3,6 +3,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'; // Pastikan ini di _app.js atau layout.tsx
+import Image from "next/image";
 
 const featureListPerawatMedis = [
   {
@@ -42,7 +43,7 @@ const FeatureListPerawtMedis = () => {
       <Row>
         {featureListPerawatMedis.map((item, idx) => (
           <Col md={3} className="mb-4 text-center" key={idx}>
-            <image
+            <Image
               src={item.img}
               width={150}
               height={150}
