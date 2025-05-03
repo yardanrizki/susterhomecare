@@ -11,7 +11,6 @@ import PartnershipSection from "../component/PartnershipSection";
 import PaymentSection from "../component/pembayaran";
 import ServiceHighlightSection from "../component/ServiceHighlightSection";
 import TestimonialSlider from "../component/TestimonialSlider";
-import VitaminPackagesSection from "../component/VitaminPackagesSection";
 export default function HomePage() {
   return (
     <>

@@ -1,6 +1,5 @@
 // src/app/page.tsx atau src/app/home/page.tsx
 
-import { Container } from "react-bootstrap/lib/Tab";
 import Hero from "../component/hero";
 import MediaCoverage from "../component/mediacoverage";
 import "../style/globals.css"; 
