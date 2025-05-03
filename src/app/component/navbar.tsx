@@ -1,11 +1,11 @@
 // src/components/Header.tsx
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "./navbar.css"; // jika class `btn-animated` kamu simpan di file ini
 import WhatsAppButton from "./buttonwhatsaap";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -15,7 +15,7 @@ const Header = () => {
           {/* Logo */}
           <Navbar.Brand as={Link} href=".." className="me-3">
             <Image
-              src="/assets/image/"
+              src="/assets/image/logo.png" // tanpa 'public/'
               alt="Logo"
               width={105}
               height={105}
