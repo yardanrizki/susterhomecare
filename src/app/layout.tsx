@@ -5,12 +5,11 @@ import Header from "./component/navbar";
 import Footer from "./component/footer";
 
 export const metadata = {
-  title: "SusterHomecare",
-  description: "Deskripsi Website",
-  icons: {
-    icon: "/public/logo.png",
-  },
+  title: "Nama Website Kamu", // Ganti dengan judul website
+  description: "Deskripsi Website", // Ganti dengan deskripsi website
+  
 };
+
 export default function RootLayout({
   children,
 }: {
@@ -18,11 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <head/>
+      <head>
+        {/* Metadata lainnya */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Pastikan icon sudah terpasang dengan benar */}
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body>
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import ContactSection from "../component/ContactSection";
 import Hero from "../component/hero";
 import PartnershipSection from "../component/PartnershipSection";
 import ServiceHighlightSection from "../component/ServiceHighlightSection";
+
 export default function HomePage() {
   return (
     <>
