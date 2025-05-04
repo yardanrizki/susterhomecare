@@ -33,7 +33,14 @@ function WhatsAppButton({
       className={className}
       style={{ display: "flex", alignItems: "center", ...style }}
     >
-      {showIcon && <FaWhatsapp style={{ marginRight: "8px" }} />}
+      {showIcon && (
+        <FaWhatsapp
+          style={{
+            marginRight: showText ? "8px" : "0", // Menambahkan margin hanya jika showText = true
+            marginBottom: "3px", // Menyesuaikan posisi vertikal ikon
+          }}
+        />
+      )}
       {showText && buttonText}
     </Button>
   );

@@ -30,11 +30,11 @@ export default function HomePage() {
         <PerawatHomecareSection />
         <div className="container my-5 w-auto">
           <div className="col-12 text-center">
-            <h2 className="display-4">
+            <h2 className="display-5 fw-bold">
               <span style={{ color: "#cc1925" }}>Jenis</span> Infus & Suntik
               Vitamin
             </h2>
-            <p>Pilih jenis vitamin yang Anda cari</p>
+            <p className="">Pilih jenis vitamin yang Anda cari</p>
           </div>
           {vitaminData.map((item, index) => (
             <VitaminCardSection

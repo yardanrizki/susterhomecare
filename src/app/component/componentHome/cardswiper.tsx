@@ -28,6 +28,23 @@ const cardData = [
 const CardSwiper = () => {
   return (
     <Container>
+      <div className="col-12 text-center">
+        <h2 className="display-6 fw-bold">
+          <span style={{ color: "#0a0a0a" }}>Apa Itu</span>{" "}
+          <span style={{ color: "#cc1925" }}>Perawathomecare?</span>
+        </h2>
+        <p className="mt-3">
+          Perawathomecare adalah layanan booster vitamin, booster kecantikan dan
+          perawat medis, yang siap{" "}
+          <span style={{ color: "#cc1925" }}>
+            melakukan kunjungan ke rumah para pasien
+          </span>{" "}
+          yang membutuhkan sehingga kini calon pasien{" "}
+          <span style={{ color: "#cc1925" }}>tidak perlu lagi lelah</span>{" "}
+          <span style={{ color: "#cc1925" }}>mengantre</span> di klinik ataupun
+          rumah sakit.
+        </p>
+      </div>
       <div className="card-swiper-wrapper">
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -42,12 +59,15 @@ const CardSwiper = () => {
             768: { slidesPerView: 3 },
           }}
           className="card-swiper"
-          
         >
           {cardData.concat(cardData).map((item, idx) => (
             <SwiperSlide key={idx} style={{ height: 500 }} className="mt-5">
               <Card className="shadow rounded-4 p-4 h-100">
-                <Card.Img variant="top" src={item.img} alt={`Card ${idx + 1}`} />
+                <Card.Img
+                  variant="top"
+                  src={item.img}
+                  alt={`Card ${idx + 1}`}
+                />
                 <Card.Body>
                   <Card.Title className="fw-bolder">{item.title}</Card.Title>
                   <Card.Text>{item.desc}</Card.Text>

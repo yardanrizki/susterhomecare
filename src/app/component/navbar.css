@@ -1,13 +1,27 @@
-.btn-animated {
-  transition: all 235ms ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+/* Styling tombol WhatsApp */
+.whatsapp-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-animated:hover {
-  transform: translate3d(0, 2px, 0);
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+.whatsapp-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;  /* Membuat tombol menjadi bulat */
+  padding: 0;
+  width: 40px;   /* Lebar tombol yang diinginkan */
+  height: 40px;  /* Tinggi tombol yang sama dengan lebar */
+  text-decoration: none;
+  transition: background-color 0.3s; /* Transisi warna saat hover */
 }
 
-.btn-animated:focus {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+.whatsapp-button:hover {
+  background-color: #128c7e;  /* Ubah warna tombol saat dihover */
+}
+
+.whatsapp-button svg {
+  font-size: 24px;  /* Ukuran ikon WhatsApp */
+  color: white;     /* Warna ikon */
 }

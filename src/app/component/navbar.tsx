@@ -36,15 +36,21 @@ const Header = () => {
           </Nav>
 
           {/* WhatsApp Button */}
-          <WhatsAppButton
-            phoneNumber="6285260724560"
-            message="Halo Sahabat Perawathomecare � Saya mau pesan Jasa Perawat dong..."
-            buttonText="Saya Berminat"
-            showText={false}
-            showIcon={true}
-            className="rounded-pill px-4 py-2 mt-3 fw-semibold text-light d-flex justify-content-end"
-            style={{ backgroundColor: "#AA151F" }}
-          />
+          <div className="whatsapp-btn-container">
+            <WhatsAppButton
+              phoneNumber="6285260724560"
+              message="Halo Sahabat Perawathomecare, Saya mau pesan Jasa Perawat dong..."
+              buttonText="Saya Berminat"
+              showText={false} // Menampilkan hanya ikon WhatsApp
+              showIcon={true}
+              className="whatsapp-button" // Tambahkan class CSS untuk styling khusus
+              style={{
+                backgroundColor: "#AA151F", // Warna latar tombol
+                width: "50px", // Menentukan lebar tombol
+                height: "50px", // Menentukan tinggi tombol yang sama dengan lebar
+              }}
+            />
+          </div>
 
           {/* Mobile Toggle */}
           <Navbar.Toggle
