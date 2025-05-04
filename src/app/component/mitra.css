@@ -1,7 +1,8 @@
+/* Wrapper untuk memastikan gambar berada dalam satu baris di perangkat besar */
 .slider-wrapper {
   overflow: hidden;
   width: 100%;
-  max-width: 800px;
+  max-width: 100%; /* Sesuaikan dengan ukuran container */
   margin: 0 auto;
   position: relative;
 }
@@ -11,16 +12,20 @@
   justify-content: center;
   align-items: center;
   transition: transform 0.5s ease-in-out;
+  flex-wrap: wrap; /* Membuat gambar bergerak ke bawah pada perangkat kecil */
 }
 
+/* Setiap gambar akan berada dalam satu kolom di perangkat mobile */
 .slide-item {
-  flex: 0 0 33.333%; /* 3 gambar per baris */
+  flex: 0 0 33.333%; /* 3 gambar per baris pada desktop */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+  margin-bottom: 20px; /* Memberi jarak antar gambar */
 }
 
+/* Gambar responsif dengan ukuran maksimal */
 .partner-image {
   max-width: 100%;
   height: auto;
@@ -31,4 +36,24 @@
 
 .partner-image:hover {
   transform: scale(1.05);
+}
+
+/* Media query untuk perangkat mobile (tampilan vertikal) */
+@media (max-width: 767px) {
+  .slide-item {
+    flex: 0 0 100%; /* Menampilkan gambar dalam satu kolom */
+    text-align: center;
+  }
+
+  /* Mengubah padding untuk perangkat mobile */
+  .slide-track {
+    gap: 20px;
+  }
+}
+
+/* Untuk tablet dan layar lebih besar, gambar tetap diatur 3 per baris */
+@media (min-width: 768px) {
+  .slide-item {
+    flex: 0 0 33.333%; /* Tampilkan 3 gambar per baris */
+  }
 }

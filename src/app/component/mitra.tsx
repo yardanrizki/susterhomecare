@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import "./mitra.css";
 import Image from "next/image";
+import "./mitra.css"; // Import the CSS file
 
+// Array gambar dengan URL dan ukuran yang dapat diatur
 const partnerData = [
   {
     imgSrc:
@@ -24,30 +24,12 @@ const partnerData = [
     link: "https://pusatokupasi.com/",
     alt: "Pusatokupasi",
   },
-  // Tambahan data duplikat ...
 ];
 
 const SlideComponent = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const totalSlides = partnerData.length;
-  const slidesToShow = 3;
 
-  useEffect(() => {
-    const autoSlide = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % totalSlides);
-    }, 3000);
-    return () => clearInterval(autoSlide);
-  }, [totalSlides]);
-
-  const getVisibleSlides = () => {
-    const slides = [];
-    for (let i = 0; i < slidesToShow; i++) {
-      slides.push(partnerData[(currentIndex + i) % totalSlides]);
-    }
-    return slides;
-  };
-
-  const visibleSlides = getVisibleSlides();
+  // Tidak perlu lagi ada logika untuk mendapatkan slides, cukup render semua
+  const visibleSlides = partnerData;
 
   return (
     <Container className="py-4">

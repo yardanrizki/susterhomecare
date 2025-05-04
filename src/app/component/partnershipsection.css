@@ -1,31 +1,24 @@
-/* Agar container gambar responsif */
-.partner-images {
+/* partnershipsection.css */
+
+/* Ensuring that the swiper slide container is centered */
+.swiper-slide-inner {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Menambahkan jarak antar gambar */
+  justify-content: center; /* Aligns content horizontally to the center */
+  align-items: center;     /* Aligns content vertically to the center */
+  height: 100%;            /* Ensures the slide has a height of 100% */
 }
 
-/* Gambar Partner */
-.partner-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain; /* Menjaga rasio aspek gambar */
-  max-width: 100%; /* Membatasi lebar gambar agar tidak melampaui lebar kontainer */
+/* Making sure the image itself stays within the container and is centered */
+.image-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  width: 100%;             /* Ensures the image container takes full width */
+  height: 100%;            /* Ensures the image container takes full height */
 }
 
-/* Responsif untuk berbagai ukuran layar */
-@media (max-width: 767px) {
-  .partner-images {
-    justify-content: space-between;
-  }
-  .partner-image {
-    width: 100%; /* Gambar menyesuaikan dengan ukuran kontainer di perangkat kecil */
-  }
-}
-
-@media (min-width: 768px) {
-  .partner-image {
-    max-width: 90%; /* Membatasi lebar gambar sedikit lebih kecil di layar besar */
-  }
+.swiper-slide-image {
+  object-fit: contain;     /* Ensures the image maintains its aspect ratio */
+  max-width: 100%;         /* Prevents the image from being too wide */
+  max-height: 100%;        /* Prevents the image from being too tall */
 }
