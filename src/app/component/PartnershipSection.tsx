@@ -1,12 +1,8 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/autoplay";
-import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { Container, Row, Col } from "react-bootstrap";
-import "./partnershipsection.css"; // Import the new CSS file
+import "./partnershipsection.css"; // Import the CSS file
 
 // Array gambar dengan URL dan ukuran yang dapat diatur
 const partners = [
@@ -87,43 +83,25 @@ export default function PartnershipSection() {
             </h2>
           </Col>
         </Row>
-        <Row>
-          <Col>
-            <div className="swiper-container">
-              <Swiper
-                modules={[Autoplay]}
-                loop={true}
-                speed={500}
-                autoplay={{ delay: 5000 }}
-                spaceBetween={50} // Menambahkan jarak antar slide
-                slidesPerView={3}
-                slidesPerGroup={1}
-                breakpoints={{
-                  320: { slidesPerView: 1, spaceBetween: 20 },
-                  480: { slidesPerView: 2, spaceBetween: 40 },
-                  768: { slidesPerView: 3, spaceBetween: 60 },
-                }}
-              >
-                {partners.map((partner, index) => (
-                  <SwiperSlide key={index}>
-                    <figure className="swiper-slide-inner">
-                      <div className="image-container">
-                        <Image
-                          src={partner.src}
-                          alt={partner.alt}
-                          width={partner.width}
-                          height={partner.height}
-                          className="swiper-slide-image"
-                        />
-                      </div>
-                    </figure>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </Col>
+
+        {/* Gambar Partner: Menggunakan Grid */}
+        <Row className="partner-images">
+          {partners.map((partner, index) => (
+            <Col xs={6} sm={4} md={3} lg={2} key={index} className="mb-4">
+              <div className="image-container">
+                <Image
+                  src={partner.src}
+                  alt={partner.alt}
+                  width={partner.width}
+                  height={partner.height}
+                  className="partner-image"
+                />
+              </div>
+            </Col>
+          ))}
         </Row>
       </Container>
     </section>
   );
 }
+  
