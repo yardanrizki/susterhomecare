@@ -36,10 +36,10 @@ export default function MediaCoverage() {
           speed={600}
           autoplay={{ delay: 5000 }}
           breakpoints={{
-            320: { slidesPerView: 2, spaceBetween: 20 },
-            480: { slidesPerView: 3, spaceBetween: 30 },
-            640: { slidesPerView: 4, spaceBetween: 40 },
-            768: { slidesPerView: 5, spaceBetween: 50 }, // Tampilkan lebih banyak pada layar lebih besar
+            320: { slidesPerView: 1, spaceBetween: 20 },
+            480: { slidesPerView: 2, spaceBetween: 30 },
+            640: { slidesPerView: 3, spaceBetween: 40 },
+            768: { slidesPerView: 4, spaceBetween: 50 }, // Tampilkan lebih banyak pada layar lebih besar
           }}
         >
           {images.map((src, index) => (
