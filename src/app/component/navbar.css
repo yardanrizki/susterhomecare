@@ -9,10 +9,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;  /* Membuat tombol menjadi bulat */
+  border-radius: 30%;  /* Membuat tombol menjadi bulat */
   padding: 0;
-  width: 40px;   /* Lebar tombol yang diinginkan */
-  height: 40px;  /* Tinggi tombol yang sama dengan lebar */
+  width: 30px;   /* Lebar tombol yang diinginkan */
+  height: 30px;  /* Tinggi tombol yang sama dengan lebar */
   text-decoration: none;
   transition: background-color 0.3s; /* Transisi warna saat hover */
 }
