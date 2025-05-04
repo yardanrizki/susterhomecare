@@ -5,7 +5,7 @@ import Header from "./component/navbar";
 import Footer from "./component/footer";
 
 export const metadata = {
-  title: "Nama Website Kamu", // Ganti dengan judul website
+  title: "SusterHomecare", // Ganti dengan judul website
   description: "Deskripsi Website", // Ganti dengan deskripsi website
   
 };
