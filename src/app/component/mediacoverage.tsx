@@ -1,5 +1,3 @@
-// src/components/MediaCoverage.tsx
-
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,7 +5,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
-import "./componentHome/swiper.css"; 
+import "./componentHome/swiper.css";
 
 const images = [
   "/assets/media/Gambar-1-1.webp",
@@ -38,9 +36,10 @@ export default function MediaCoverage() {
           speed={600}
           autoplay={{ delay: 5000 }}
           breakpoints={{
-            320: { slidesPerView: 2, spaceBetween: 40 },
-            480: { slidesPerView: 3, spaceBetween: 60 },
-            640: { slidesPerView: 4, spaceBetween: 80 },
+            320: { slidesPerView: 2, spaceBetween: 20 },
+            480: { slidesPerView: 3, spaceBetween: 30 },
+            640: { slidesPerView: 4, spaceBetween: 40 },
+            768: { slidesPerView: 5, spaceBetween: 50 }, // Tampilkan lebih banyak pada layar lebih besar
           }}
         >
           {images.map((src, index) => (
@@ -53,14 +52,20 @@ export default function MediaCoverage() {
                 alt={`Media ${index + 1}`}
                 width={200}
                 height={50}
-                className="image-fluid"
+                className="img-fluid" // Gunakan kelas bootstrap img-fluid agar gambar responsif
+                style={{ objectFit: "contain", width: "100%" }} // Pastikan gambar tidak terpotong dan responsif
               />
             </SwiperSlide>
           ))}
         </Swiper>
         <div
           className="swiper-pagination"
-          style={{ marginTop: "2rem", position: "relative", zIndex: 10 }}
+          style={{
+            marginTop: "2rem",
+            position: "relative",
+            zIndex: 10,
+            textAlign: "center",
+          }}
         ></div>
       </div>
     </section>
