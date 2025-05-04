@@ -48,12 +48,8 @@ const paymentLogos = [
 ];
 
 const PaymentSection = () => {
-  const firstRow = paymentLogos.slice(0, 4);
-  const secondRow = paymentLogos.slice(4, 7);
-  const moreRows = paymentLogos.slice(7);
-
   return (
-    <section className="py-2">
+    <section className="py-5 bg-light">
       <Container>
         <Row className="text-center mb-4">
           <Col>
@@ -61,49 +57,17 @@ const PaymentSection = () => {
           </Col>
         </Row>
 
-        {/* Baris pertama: 4 logo */}
-        <Row className="justify-content-center mb-4 align-items-center">
-          {firstRow.map((logo, index) => (
+        <Row className="justify-content-center g-4">
+          {paymentLogos.map((logo, index) => (
             <Col
               key={index}
-              xs={5}
-              lg={2}
-              className="d-flex justify-content-center mb-4"
+              xs={12}
+              sm={6}
+              md={4}
+              lg={3}
+              className="d-flex justify-content-center align-items-center"
             >
-              <div
-                style={{
-                  maxWidth: "150px",
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.width}
-                  height={logo.height}
-                  style={{
-                    maxWidth: "150px !important",
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
-            </Col>
-          ))}
-        </Row>
-
-        {/* Baris kedua: 3 logo tengah */}
-        <Row className="justify-content-center mb-3">
-          {secondRow.map((logo, index) => (
-            <Col
-              key={index}
-              xs={6}
-              md={2}
-              className="d-flex justify-content-center mb-4"
-              style={{ maxWidth: "250px" }} // Biar lebih kecil kalau mau
-            >
-              <div style={{ maxWidth: "200px", width: "100%" }}>
+              <div style={{ maxWidth: "160px", width: "100%" }}>
                 <Image
                   src={logo.src}
                   alt={logo.alt}
@@ -119,34 +83,6 @@ const PaymentSection = () => {
             </Col>
           ))}
         </Row>
-
-        {/* Kalau ada tambahan logo lebih dari 7, teruskan isi */}
-        {moreRows.length > 0 && (
-          <Row className="justify-content-center mb-4">
-            {moreRows.map((logo, index) => (
-              <Col
-                key={index}
-                xs={6}
-                md={4}
-                className="d-flex justify-content-center mb-4"
-              >
-                <div style={{ maxWidth: "200px", width: "100%" }}>
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={logo.width}
-                    height={logo.height}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      objectFit: "contain",
-                    }}
-                  />
-                </div>
-              </Col>
-            ))}
-          </Row>
-        )}
       </Container>
     </section>
   );
